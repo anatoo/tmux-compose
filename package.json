@@ -1,7 +1,7 @@
 {
   "name": "tmux-compose",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "test": "bun test",
     "dev": "bun src/index.ts",
