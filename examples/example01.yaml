@@ -1,0 +1,5 @@
+name: example01
+root: ../
+windows:
+  dev: npm run dev
+  log: tail -f /var/log/nginx/access.log
