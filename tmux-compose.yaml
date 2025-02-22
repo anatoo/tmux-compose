@@ -1,0 +1,7 @@
+name: tmux-compose-dev
+
+root: .
+
+windows:
+  test: bun test --watch
+  shell: ""

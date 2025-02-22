@@ -7,6 +7,12 @@ export const build = (config: Config, configDirPath: string = process.cwd()) => 
 
   const commands: string[] = [];
 
+  // tmuxのセッションにすでにいる場合にはなにもしない
+  commands.push('if [ -n "$TMUX" ]; then');
+  commands.push('  echo "Already inside a tmux session";');
+  commands.push('  exit 1;');
+  commands.push('fi');
+
   // セッションのルートディレクトリに移動する
   const root = config.root?.startsWith("/") ? config.root : resolve(configDirPath, config.root ?? "./");
   commands.push(`cd '${root}';`);

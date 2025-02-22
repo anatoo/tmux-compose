@@ -12,7 +12,11 @@ describe("build", () => {
     };
 
     expect(build(config, configDirPath)).toMatchInlineSnapshot(`
-      "cd '/my-project';
+      "if [ -n "$TMUX" ]; then
+        echo "Already inside a tmux session";
+        exit 1;
+      fi
+      cd '/my-project';
       if ! tmux has-session -t 'test-session' 2>/dev/null; then
         tmux new-session -d -s 'test-session';
       else
@@ -32,7 +36,11 @@ describe("build", () => {
     };
 
     expect(build(config, configDirPath)).toMatchInlineSnapshot(`
-      "cd '/my-project';
+      "if [ -n "$TMUX" ]; then
+        echo "Already inside a tmux session";
+        exit 1;
+      fi
+      cd '/my-project';
       if ! tmux has-session -t 'dev' 2>/dev/null; then
         tmux new-session -d -s 'dev';
         tmux rename-window -t 'dev:0' 'editor';
@@ -56,7 +64,11 @@ describe("build", () => {
     };
 
     expect(build(config, configDirPath)).toMatchInlineSnapshot(`
-      "cd '/my-project';
+      "if [ -n "$TMUX" ]; then
+        echo "Already inside a tmux session";
+        exit 1;
+      fi
+      cd '/my-project';
       if ! tmux has-session -t 'test' 2>/dev/null; then
         tmux new-session -d -s 'test';
         tmux rename-window -t 'test:0' 'empty';
