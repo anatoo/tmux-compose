@@ -1,13 +1,14 @@
 {
   "name": "tmux-compose",
   "type": "module",
+  "version": "0.0.3",
   "scripts": {
     "test": "bun test",
     "dev": "bun src/index.ts",
     "build": "tsup src/index.ts --out-dir dist"
   },
   "bin": {
-    "tmux-compose": "./bin/tmux-compose"
+    "tmux-compose": "./bin/tmux-compose.cjs"
   },
   "devDependencies": {
     "@types/bun": "latest",
