@@ -4,7 +4,7 @@
 
 `tmux-compose` is yet another [tmuxinator](https://github.com/tmuxinator/tmuxinator) alternative.
 
- - Start your tmux sessions with one command from the defined config file
+ - Start your tmux sessions from the defined config file
  - Built with TypeScript
 
 ## Install
@@ -32,7 +32,7 @@ windows:
   server: npm run dev
 ```
 
-Run the following command to start the session. 
+Run the following command to start the session in same directory. 
 
 ```bash
 $ tmux-compose start
@@ -52,14 +52,13 @@ MIT
 
 ## Development
 
-Install dependencies:
+Prerequisites:
 
-```bash
-$ bun install
-```
+ - Node.js
+ - Bun
 
-Run tests:
+Tasks:
 
-```bash
-$ bun test
-```
+ - `bun install`: Install dependencies
+ - `bun run test`: Run tests
+ - `bun run build`: Build
