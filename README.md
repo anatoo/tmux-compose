@@ -1,9 +1,11 @@
 # `tmux-compose`
 
+![NPM Version](https://img.shields.io/npm/v/tmux-compose)
+
 `tmux-compose` is yet another [tmuxinator](https://github.com/tmuxinator/tmuxinator) alternative.
 
  - Start your tmux sessions with one command from the defined config file
- - Built with TypeScript/Node.js
+ - Built with TypeScript
 
 ## Install
 
@@ -24,8 +26,8 @@ name: my-session
 # Root directory of your project(optional)
 root: ./
 
-# Windows
 windows:
+  # Window names and commands to run
   editor: vim
   server: npm run dev
 ```
@@ -47,3 +49,17 @@ $ tmux-compose start -c tmux-compose.yaml
 ## License
 
 MIT
+
+## Development
+
+Install dependencies:
+
+```bash
+$ bun install
+```
+
+Run tests:
+
+```bash
+$ bun test
+```
