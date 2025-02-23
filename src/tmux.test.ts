@@ -17,7 +17,7 @@ afterEach(() => {
 // smoke testを書く
 describe("tmux", () => {
   test("newSession()", async () => {
-    await tmux.newSession("test-session");
+    await tmux.newSession("test-session", "/path/to/project");
   });
 
   test('hasSession()', async () => {
