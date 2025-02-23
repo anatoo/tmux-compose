@@ -5,7 +5,8 @@
   "scripts": {
     "test": "bun test",
     "dev": "bun src/index.ts",
-    "build": "tsup src/index.ts --out-dir dist"
+    "build": "tsup src/index.ts --out-dir dist",
+    "build-standalone": "bun build src/index.ts --compile --outfile tmux-compose"
   },
   "bin": {
     "tmux-compose": "./bin/tmux-compose.cjs"
@@ -38,5 +39,8 @@
   },
   "trustedDependencies": [
     "@jcoreio/kexec"
-  ]
+  ],
+  "patchedDependencies": {
+    "@jcoreio/kexec@4.0.0": "patches/@jcoreio%2Fkexec@4.0.0.patch"
+  }
 }

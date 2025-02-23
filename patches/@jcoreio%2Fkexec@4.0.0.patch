@@ -1,0 +1,8 @@
+diff --git a/index.js b/index.js
+index 81f4a633d51e4e36551210dbb963b4dd850d1cb2..2459ff9b820ad3f4a877915c12847fe89004ff5c 100644
+--- a/index.js
++++ b/index.js
+@@ -1 +1 @@
+-module.exports = require('bindings')('kexec.node').kexec
++module.exports = require('bindings')({bindings: 'kexec.node', module_root: __dirname}).kexec
+\ No newline at end of file

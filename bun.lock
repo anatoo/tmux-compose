@@ -20,6 +20,9 @@
   "trustedDependencies": [
     "@jcoreio/kexec",
   ],
+  "patchedDependencies": {
+    "@jcoreio/kexec@4.0.0": "patches/@jcoreio%2Fkexec@4.0.0.patch",
+  },
   "packages": {
     "@esbuild/aix-ppc64": ["@esbuild/aix-ppc64@0.24.2", "", { "os": "aix", "cpu": "ppc64" }, "sha512-thpVCb/rhxE/BnMLQ7GReQLLN8q9qbHmI55F4489/ByVg2aQaQ6kbcLb6FHkocZzQhxc4gx0sCk0tJkKBFzDhA=="],
 
