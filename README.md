@@ -1,6 +1,6 @@
 # `tmux-compose`
 
-![NPM Version](https://img.shields.io/npm/v/tmux-compose)
+<a href="https://www.npmjs.com/package/tmux-compose"><img src="https://img.shields.io/npm/v/tmux-compose"  alt="NPM Version" target="_blank" rel="noopener" /></a>
 
 `tmux-compose` is yet another [tmuxinator](https://github.com/tmuxinator/tmuxinator) alternative.
 
@@ -27,9 +27,9 @@ name: my-session
 root: ./
 
 windows:
-  # Window names and commands to run
+  # Window name and commands to run
   editor: vim
-  server: npm run dev
+  dev: npm run dev
 ```
 
 Run the following command to start the session in same directory. 
